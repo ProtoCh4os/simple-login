@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "ignore": ["node_modules", ".next", "src/server"],
+    "watch": ["pages/**/*", "components", "assets"],
+    "ext": "js json sass"
+}
