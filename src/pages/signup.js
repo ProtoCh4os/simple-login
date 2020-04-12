@@ -4,7 +4,6 @@ import { Grid, Button } from "@material-ui/core";
 import Layout from "../components/layout";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import axios from "axios";
-import { SHA256 } from "crypto-js";
 import Router from "next/router";
 import Cookies from "js-cookie";
 
@@ -49,8 +48,6 @@ class Signup extends React.Component {
     this.forceUpdate();
 
     var form = this.state.form;
-    const pass = form.pass;
-    form.pass = SHA256(form.pass).toString();
 
     axios
       .post("http://localhost:3000/signup", form)
@@ -64,7 +61,6 @@ class Signup extends React.Component {
 
           this.state.nameExists.push(name);
           this.state.form.name = "";
-          this.state.form.pass = pass;
           this.setState(this.state);
 
           this.state.form.name = name;

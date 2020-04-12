@@ -126,6 +126,11 @@ class List extends React.Component {
             </Button>
           </Link>
         </Grid>
+        <Link href="/login">
+          <Button variant="contained" color="default">
+            Sair
+          </Button>
+        </Link>
       </Layout>
     );
   }

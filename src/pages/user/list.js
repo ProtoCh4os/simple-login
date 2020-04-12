@@ -113,11 +113,16 @@ class List extends React.Component {
           style={{ padding: 10 }}
         >
           <Link href="/client">
-          <Button variant="contained" color="primary">
-            Gerir Clientes
-          </Button>
+            <Button variant="contained" color="primary">
+              Gerir Clientes
+            </Button>
           </Link>
         </Grid>
+        <Link href="/login">
+          <Button variant="contained" color="default">
+            Sair
+          </Button>
+        </Link>
       </Layout>
     );
   }

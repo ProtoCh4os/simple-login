@@ -1,8 +1,10 @@
 import db from "../db";
 import jwt from "../jwt";
+import { SHA256 } from "crypto-js";
 
 export default (data) => {
-  const form = data.body;
+  var form = data.body;
+  form.pass = SHA256(form.pass).toString();
 
   const userExists = db.select({ name: form.name }, "users");
 

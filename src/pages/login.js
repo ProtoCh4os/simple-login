@@ -3,7 +3,6 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import { Button, Grid } from "@material-ui/core";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
-import { SHA256 } from "crypto-js";
 import Router from "next/router";
 import Cookies from 'js-cookie';
 
@@ -36,9 +35,6 @@ class Login extends React.Component {
     }
 
     var form = this.state.form;
-    const pass = this.state.form.pass;
-    form.pass = SHA256(form.pass).toString();
-
     axios
       .post("http://localhost:3000/login", form)
       .then((response) => {

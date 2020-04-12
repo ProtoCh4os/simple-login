@@ -1,6 +1,6 @@
 {
   "verbose": true,
-  "ignore": ["db.json"],
+  "ignore": ["db.json", "pages", "assets"],
   "watch": ["*"],
   "ext": "js json"
 }
